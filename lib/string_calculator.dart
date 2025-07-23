@@ -28,6 +28,6 @@ class StringCalculator {
       throw FormatException("negative numbers not allowed: ${negatives.join(',')}");
     }
 
-    return numbers.fold(0, (initialValue, currentValue) => initialValue + currentValue);
+    return numbers.where((currentValue) => currentValue <= 1000).fold(0, (initialValue, currentValue) => initialValue + currentValue);
   }
 }
