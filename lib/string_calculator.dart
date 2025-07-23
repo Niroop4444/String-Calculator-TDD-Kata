@@ -1,19 +1,18 @@
 class StringCalculator {
 
-  final RegExp commaRegEx = RegExp(r',');
+  final RegExp commaNewLineRegEx = RegExp(r'[,\n]');
 
   int add(String input) {
     if (input.isEmpty) return 0;
 
-    if (!input.contains(commaRegEx)) {
+    if (!input.contains(commaNewLineRegEx)) {
       return int.parse(input.trim());
     }
 
-    final numbers = input.split(commaRegEx);
-
+    final numbers = input.split(commaNewLineRegEx);
     /// Removing because of Step 2
     // if (numbers.length > 2) {
-    //   throw FormatException("Only up to 2 numbers are allowed");
+    //   throw FormatException("Only up to a2 numbers are allowed");
     // }
 
     if (numbers.any((n) => n.trim().isEmpty)) {
