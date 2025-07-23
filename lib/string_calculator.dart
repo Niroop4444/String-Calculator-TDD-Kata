@@ -20,16 +20,14 @@ class StringCalculator {
       delimiter = RegExp(RegExp.escape(customDelimiter));
     }
 
-    final numbers = numbersSection.split(delimiter).map((n) => n.trim()).toList();
-    /// Removing because of Step 2
-    // if (numbers.length > 2) {
-    //   throw FormatException("Only up to a2 numbers are allowed");
-    // }
+    final numberStrings = numbersSection.split(delimiter).map((n) => n.trim()).toList();
+    final numbers = numberStrings.map(int.parse).toList();
+    final negatives = numbers.where((n) => n < 0).toList();
 
-    if (numbers.any((n) => n.trim().isEmpty)) {
-      throw FormatException("Input contains missing or invalid numbers");
+    if (negatives.isNotEmpty) {
+      throw FormatException("negative numbers not allowed: ${negatives.join(',')}");
     }
 
-    return numbers.fold(0, (initialValue, currentValue) => initialValue + int.parse(currentValue));
+    return numbers.fold(0, (initialValue, currentValue) => initialValue + currentValue);
   }
 }
