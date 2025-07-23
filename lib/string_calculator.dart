@@ -11,9 +11,10 @@ class StringCalculator {
 
     final numbers = input.split(commaRegEx);
 
-    if (numbers.length > 2) {
-      throw FormatException("Only up to 2 numbers are allowed");
-    }
+    /// Removing because of Step 2
+    // if (numbers.length > 2) {
+    //   throw FormatException("Only up to 2 numbers are allowed");
+    // }
 
     if (numbers.any((n) => n.trim().isEmpty)) {
       throw FormatException("Input contains missing or invalid numbers");
