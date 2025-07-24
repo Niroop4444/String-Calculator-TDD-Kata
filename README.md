@@ -143,4 +143,10 @@ Enhanced the logic to ignore any number greater than 1000 during summation. Thes
 
 ## 📸 Screenshots
 
-![Addition seperated by comma](assets/images/addition seperated by comma.png)
+![Single number](assets/single_number.png)
+![Empty String](assets/empty_string.png)
+![Addition seperated by comma](assets/addition_seperated_by_comma.png)
+![More than 2 numbers addition](assets/more_than_2_numbers_addition.png)
+![Multiple Decimiters](assets/multiple_delimiters.png)
+![New Line addition](assets/new_line_addition.png)
+![Numbers bigger than 1000](assets/numbers_bigger_than_1000_considered_0.png)
