@@ -58,7 +58,7 @@ Values are entered through a `TextFormField`, and when the `ElevatedButton` is p
 
 `flutter test test/step1_add_string_of_comma_separated_numbers.dart`
 
-🧑‍💻 Implementation Overview
+## 🧑‍💻 Implementation Overview
 
 To accomplish this kata:
 
@@ -141,3 +141,6 @@ Implemented logic to detect negative numbers and throw a `FormatException`. If t
 
 Enhanced the logic to ignore any number greater than 1000 during summation. These numbers are treated as zero and do not affect the result. Tests confirm that 1000 is still included, while numbers like 1001 or 1234 are excluded from the total.
 
+## 📸 Screenshots
+
+![Addition seperated by comma](assets/images/addition seperated by comma.png)
